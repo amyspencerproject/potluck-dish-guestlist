@@ -6,6 +6,7 @@ const guestCount = document.querySelector(".attendance"); // span class for numb
 const guestFull = document.querySelector(".alert"); // alert when guest list is full (not yet visible)
 const assignButton = document.querySelector(".assign"); // assign button
 const assignedItems = document.querySelector(".assigned-items"); // targets the list of both guest's name and assigned dish
+const footer = document.querySelector("footer");
 
 addGuestButton.addEventListener("click", function () {
     const guest = guestInput.value; //grab the input field when user clicks on button
@@ -72,4 +73,5 @@ const assignItems = function () {
 assignButton.addEventListener("click", function () {
     assignItems();
     assignButton.disabled = true;
+    footer.classList.remove("hide");
   });
